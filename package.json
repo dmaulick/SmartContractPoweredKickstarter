@@ -1,0 +1,26 @@
+{
+  "name": "smartcontractpoweredkickstarter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmaulick/SmartContractPoweredKickstarter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmaulick/SmartContractPoweredKickstarter/issues"
+  },
+  "homepage": "https://github.com/dmaulick/SmartContractPoweredKickstarter#readme",
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "ganache-cli": "^6.11.0",
+    "mocha": "^8.1.3",
+    "solc": "^0.7.3",
+    "web3": "^1.3.0"
+  }
+}
