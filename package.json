@@ -6,7 +6,8 @@
   "scripts": {
     "v": "node -v",
     "t": "mocha",
-    "c": "node ./ethereum/compile.js"
+    "c": "node ./ethereum/compile.js",
+    "dev": "next dev"
   },
   "repository": {
     "type": "git",
