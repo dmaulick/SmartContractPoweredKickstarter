@@ -2,7 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/show": "pages/show.js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
-  "/newcampaign": "pages/newcampaign.js"
+  "/": "pages/index.js"
 }
