@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import factory from "../ethereum/factory";
+import Layout from '../components/Layout';
+import { Card, Button } from 'semantic-ui-react';
 
 function Root({ campaigns }) {
   const items = campaigns.map((address) => {
@@ -10,7 +12,14 @@ function Root({ campaigns }) {
     };
   });
 
-  return <h1>This is root.. {campaigns}</h1>;
+  return (
+    <Layout>
+        <div>
+          <h3>Open Campaigns</h3>
+          <Card.Group items={items} />
+        </div>
+      </Layout>
+  );
 }
 
 Root.getInitialProps = async (ctx) => {
