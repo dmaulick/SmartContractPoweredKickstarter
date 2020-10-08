@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "v": "node -v",
-    "test": "mocha"
+    "t": "mocha",
+    "c": "node ./ethereum/compile.js"
   },
   "repository": {
     "type": "git",
