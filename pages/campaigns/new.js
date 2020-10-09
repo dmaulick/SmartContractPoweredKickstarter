@@ -1,8 +1,8 @@
 import React, { Component, useCallback, useState } from 'react';
 import { Form, Button, Input, Message } from 'semantic-ui-react';
-import Layout from '../components/Layout';
-import factory from '../ethereum/factory';
-import web3 from '../ethereum/web3';
+import Layout from '../../components/Layout';
+import factory from '../../ethereum/factory';
+import web3 from '../../ethereum/web3';
 import { useRouter } from 'next/router'
 
 const New = () => {
@@ -15,7 +15,7 @@ const New = () => {
 
     console.log('minimumContribution:', minimumContribution, ":");
     
-    const onSubmit = () => {
+    const onSubmit = async (event) => {
             console.log('a -dick');
             event.preventDefault();
         
@@ -41,12 +41,10 @@ const New = () => {
         };
 
     return (
-        // <Layout>
-        <>
-        <h3>Create a Campaign</h3>
-        {console.log('in jsx')}
+        <Layout>
+          <h3>Create a Campaign</h3>
 
-          {/* <Form onSubmit={onSubmit} error={!!errorMessage}>
+          <Form onSubmit={() => alert('bang')} error={!!errorMessage}>
             <Form.Field>
               <label>Minimum Contribution</label>
               <Input
@@ -66,60 +64,11 @@ const New = () => {
               Create!
             </Button>
 
-          </Form> */}
-          <button className="square" onClick={() => console.log("HEELO")} >HELLO</button>
- 
-        </>
-                 // </Layout>
+          </Form>
+          <button className="square" onClick={() => alert('click')} >HELLO</button>
+        </Layout>
       );
 
 }
 
 export default New;
-
-// import React, { useEffect, useState } from "react";
-// import factory from "../ethereum/factory";
-// import Layout from '../components/Layout';
-// import { Card, Button } from 'semantic-ui-react';
-// import Link from 'next/link'
-
-// function Root({ campaigns }) {
-
-//   const items = campaigns.map((address) => {
-//     return {
-//       header: address,
-//         description: (
-//           <Link href={`/campaigns/${address}`}>
-//             <a>View Campaign</a>
-//           </Link>
-//         ),
-//         fluid: true
-//     };
-//   });
-
-//   return (
-//     <Layout>
-//         <div>
-//         <Link href="/campaigns/new">
-//             <a>
-//               <Button
-//                 floated="right"
-//                 content="Create Campaign"
-//                 icon="add circle"
-//                 primary
-//               />
-//             </a>
-//           </Link>
-//           <h3>Open Campaigns</h3>
-//           <Card.Group items={items} />
-//         </div>
-//       </Layout>
-//   );
-// }
-
-// Root.getInitialProps = async (ctx) => {
-//   const campaigns = await factory.methods.getDeployedCampaigns().call();
-//   return { campaigns };
-// };
-
-// export default Root;
