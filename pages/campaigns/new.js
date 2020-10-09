@@ -19,25 +19,25 @@ const New = () => {
             console.log('a -dick');
             event.preventDefault();
         
-            // setLoading(true);
-            // setErrorMessage('');
+            setLoading(true);
+            setErrorMessage('');
         
-            // try {
-            //   const accounts = await web3.eth.getAccounts();
-            //   console.log('b', accounts[0]);
-            // //   await factory.methods
-            // //     .createCampaign(minimumContribution)
-            // //     .send({
-            // //       from: accounts[0]
-            // //     });
+            try {
+              const accounts = await web3.eth.getAccounts();
+              console.log('b', accounts[0]);
+              await factory.methods
+                .createCampaign(minimumContribution)
+                .send({
+                  from: accounts[0]
+                });
         
-            //     router.push('/');
-            // } catch (err) {
-            //     console.log('c', err);
-            //     setErrorMessage(err.message);
-            // }
+                router.push('/');
+            } catch (err) {
+                console.log('c', err);
+                setErrorMessage(err.message);
+            }
         
-            // setLoading(false);
+            setLoading(false);
         };
 
     return (
